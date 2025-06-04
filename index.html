@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piotr Henzolt - About me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- --------hamburger menu-------- -->
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="side-menu" id="sideMenu">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#internet">Internet</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- -------------home------------- -->
+    <div id="home">
+        <div class="container">
+            <div class="navigation-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#data">Data</a></li>
+                        <li><a href="#internet">Internet</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="home-text">
+                <p>IT Student</p>
+                <h1>HI, I'M <span>PIOTR</span><br>I AM A DESIGNER<br>AND BEGINNER <br>WEB DEVELOPER</h1>
+                <p id="catchphrase">I'm a Polish student that went from gaming to designing. <br>I'm aiming to improve my web-development skills.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img id="about-image" src="images/my_image.png">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>My name is Piotr Henzolt, I aspire to become a web developer with a focus on creating innovative and user-friendly web applications. My goal is to master various web technologies, stay updated on industry trends, and contribute to projects that make a positive impact. I've enjoyed building things since i was little and coding/designing is just like building - that's why I like it!</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'University')">University</p>
+                        <p class="tab-links" onclick="opentab(event, 'Achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab(event, 'Hobbies')">Hobbies</p>
+                    </div>
+
+                    <div class="tab-contents active-tab show" id="University">
+                        <ul>
+                            <li><span>University</span><br>Cracow University of Economics</li>
+                            <li><span>Field of study</span><br>Applied Informatics</li>
+                            <li><span>Why this field</span><br>I've always been passionate about technology and programming. Studying IT allows me to explore my interests in depth. I've always been good with computers and everyone came to me if they had a tech-related problem. For me out of all the fields Applied Informatics was the obvious choice.</li>
+                            <li><span>Expectations</span><br>I hope to gain a solid understanding of web developement, programming principles, develop practical skills, and contribute to innovative projects. I also hope to level up my teamwork as well as communication. I expect to get a well-paid job that I will enjoy after completing this course.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Achievements">
+                        <ul class="styled-list">
+                            <li><span>School</span></li>
+                            <li>● Received the Rector's Scholarship at the Cracow University of Economics.</li>
+                            <li>● Served as the main administrator of my former school's website.</li>
+                            <li>● Provided IT support to school staff, including hardware setup, software troubleshooting, and maintenance of tech equipment.</li>
+                            <li>● Completed C/C++ courses at the Jagiellonian University with a final grade of 5 (equivalent to A).</li>
+                            <li>● Managed a school shop at the age of 15.</li>
+                            <li><span>Free Time</span></li>
+                            <li>● Founded and managed a gaming group of over 150 players.</li>
+                            <li>● Created and edited 30+ YouTube videos as well as designing thumbnails for each of them.</li>
+                            <li>● Built a fully customized gaming setup from scratch.</li>
+                            <li>● Passed the driving test on the first attempt.</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Hobbies">
+                        <ul>
+                            <li><span>Designing/Coding</span><br>I always liked building, and designing/coding is just like building! You can create whatever you can imagine.</li>
+                            <li><span>Cooking</span><br>I recently started cooking for myself and I found out that I actually enjoy it. Being able to add whatever you want to your dish and make it as you like is great. Seeing the result and enjoying the taste is very fulfilling.</li>
+                            <li><span>Gaming</span><br>Strategy, MMORPG, Battle Royale, Survival games are types of games I like to play with my friends. They are a great decelerator and can bring you a lot of joy.</li>
+                            <li><span>Motorcycles</span><br>My dad rode motorcycles since he was a teenager and that's how this passion was passed on to me. Now I have my own motorcycle and I ride it from time to time.</li>
+                            <li><span>Cars</span><br>My interest in cars started only recently, but it's been growing quickly. I have been exploring different car models, learning how engines work, and watching videos about car builds and reviews. I am currently looking for one for myself.</li>
+                            <li><span>Badminton</span><br>My godmother was the Polish badminton champion and we alwas played when I was little, and that's how the passion was born. Right now I'm playing it once a week during my PE classes.</li>
+                            <li><span>Books</span><br>Fantasy and science-fiction books are my go-to's, one of my favorite authors is Andrzej Pilipuk. I often reach for the books I read before and I always enjoy reading them again.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------table and data------------- -->
+    
+    <div id="data">
+        <div class="container">
+            <div class="data-table-information">
+                <h1 id="data-title" class="sub-title">Data Table</h1>
+                <p>The data set captures essential information about employees of an IT company, including personal details, employment specifics, and departmental affiliations. The structure is tabular, organized in rows and columns, where each row corresponds to a unique employee, and each column represents a specific attribute or characteristic.</p>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Hire Date</th>
+                            <th>Working Remotely</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data will be imported here -->
+                    </tbody>
+                </table>
+            </div>
+
+        <!-- -------------descriptions and files------------- -->
+            <div class="format-information">
+                <div onclick="openFile('MOCK_DATA.xml')">
+                    <h2>XML</h2>
+                    <p>XML (eXtensible Markup Language) is a hierarchical data format using tags to define elements. It allows for nested and structured data. It's human-readable and suitable for complex data structures.</p>
+                </div>
+                <div onclick="openFileCSV()">
+                    <h2>CSV</h2>
+                    <p>CSV (Comma-Separated Values) is a simple, text-based format where each line represents a record, and fields are separated by commas. It's easy to read and widely supported but may struggle with complex structures.</p>
+                </div>
+                <div onclick="openFile('MOCK_DATA.json')">
+                    <h2>JSON</h2>
+                    <p>JSON (JavaScript Object Notation) is a lightweight, text-based format for data interchange. It uses key-value pairs and supports nested structures. It's widely used in web development and easy for both humans and machines to read.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------internet and footer------------- -->
+    <div id="internet">
+        <div class="container">
+            <div class="row">
+                <!-- mini navbar -->
+                <div class="internet-col-1 internet-column">
+                    <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#data">Data</a></li>
+                        <li><a href="#internet">Internet</a></li>
+                    </ul>
+                </div>
+
+                <!-- internet -->
+                <div class="internet-col-2 internet-column">
+                    <h2>Internet</h2>
+                    <!-- search -->
+                    <form action="http://bing.com" target="_blank">
+        
+                        <label for="fname" class="search-text">What are you looking for:</label><br>
+                    
+                        <input type="text" id="q" name="q" placeholder="Funny cats" class="search-block"><br>
+                    
+                        <input type="submit" value="Search" class="search-button">
+                    
+                    </form>
+                </div>
+
+                <!-- contact -->
+                <div class="internet-col-3 internet-column">
+                    <h2>Contact</h2>
+                    <p>Piotr Henzolt<br>piotr.henzolt@gmail.com</p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------scrollreveal------------- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- -------------data table------------- -->
+    <script src="./script.js"></script>
+    <!-- -------------fontawesome------------- -->
+    <script src="https://kit.fontawesome.com/2d8fe6a7d0.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
