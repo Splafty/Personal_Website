@@ -41,6 +41,25 @@ body
     position: fixed;
 }
 
+.menu-icon:hover
+{
+    color: #85FF25;
+}
+
+.menu-x
+{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 101;
+    /* position: fixed; */
+}
+
+.menu-x:hover
+{
+    color: #85FF25;
+}
+
 .side-menu
 {
     position: fixed;
