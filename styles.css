@@ -1,3 +1,6 @@
+/* * {
+  outline: 1px solid red;
+} */
 /* <!-- -------------general------------- --> */
 *
 {
@@ -68,7 +71,7 @@ body
     width: 70%;
     height: 100vh;
     background: black;
-    padding: 60px 20px;
+    padding: 20px 20px;
     box-shadow: -2px 0 8px rgba(0,0,0,0.5);
     transition: right 0.3s ease;
     z-index: 100;
@@ -182,7 +185,7 @@ nav ul li a:hover::after
 
 .home-text h1
 {
-    font-size: clamp(2.5rem, 5vw, 4.125rem);
+    font-size: clamp(1.5rem, 5vw, 4.125rem);
     margin-top: 20px;
 }
 
@@ -199,12 +202,6 @@ nav ul li a:hover::after
 }
 
 /* <!-- -------------about------------- --> */
-#about 
-{
-    padding: 50px 0px;
-    color: lightgray;
-}
-
 .row
 {
     display: flex;
@@ -255,12 +252,22 @@ nav ul li a:hover::after
 .tab-titles
 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: clamp(1rem, 2vw, 2rem);
     margin: 20px 0 40px;
+}
+
+@media (max-width: 330px)
+{
+    .tab-titles
+    {
+        justify-content: center;
+    }
 }
 
 .tab-links
 {
-    margin-right: 50px;
     font-size: 20px;
     font-weight: 650;
     cursor: pointer;
@@ -366,7 +373,7 @@ nav ul li a:hover::after
     text-align: left;
 }
 
-.data-table-information
+.data-table
 {
     overflow: auto;
 }
@@ -437,9 +444,8 @@ td
 }
 
 #internet .container .row h2
-
 {
-    margin-bottom: 30px;
+    margin-bottom: clamp(1rem, 1rem + 1vw, 2rem);
     letter-spacing: 1px;
 }
 
@@ -490,8 +496,9 @@ td
     margin: 10px;
     border-color: white;
     border-radius: 5px;
-    width: min(100%, 300px);
+    width: clamp(12rem, 12rem + 5vw, 18rem);
     height: 40px;
+    
 }
 
 .internet-col-2 .search-button
