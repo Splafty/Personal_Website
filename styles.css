@@ -42,11 +42,7 @@ body
     color: white;
     z-index: 101;
     position: fixed;
-}
-
-.menu-icon:hover
-{
-    color: #85FF25;
+    transition: 0.5s;
 }
 
 .menu-x
@@ -55,9 +51,10 @@ body
     cursor: pointer;
     color: white;
     z-index: 101;
-    /* position: fixed; */
+    transition: 0.5s;
 }
 
+.menu-icon:hover,
 .menu-x:hover
 {
     color: #85FF25;
@@ -92,18 +89,6 @@ body
     gap: 15px
 }
 
-.nav-links li a
-{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.nav-links li a:hover
-{
-    color: #85FF25;
-}
-
 @media (max-width: 800px)
 {
     .menu-icon
@@ -125,7 +110,7 @@ nav
 {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
@@ -181,6 +166,7 @@ nav ul li a:hover::after
 .home-text 
 {
     margin-top: clamp(10%, 10vh, 20%);
+    
 }
 
 .home-text h1
@@ -208,6 +194,7 @@ nav ul li a:hover::after
     justify-content: center;
     flex-wrap: wrap;
     gap: clamp(30px, 5vw, 40px);
+    overflow: hidden;
 }
 
 .about-col-1
@@ -218,15 +205,16 @@ nav ul li a:hover::after
 .about-col-1 img
 {
     width: 100%;
-    min-width: 300px;
+    min-width: 260px;
+    max-width: 500px;
     border-radius: 10px;
 }
 
-@media (max-width: 800px)
+@media (max-width: 1100px)
 {
-  .about-col-1 img
+  .about-col-1
     {
-    min-width: 80vw;
+        flex-basis: 70%;
     }
 }
 
@@ -235,18 +223,12 @@ nav ul li a:hover::after
     flex-basis: 60%;
 }
 
-@media (max-width: 800px)
+@media (max-width: 1100px)
 {
   .about-col-2
     {
-    min-width: 80vw;
+        flex-basis: 100%;
     }
-}
-.sub-title
-{
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 600;
-    color: white;
 }
 
 .tab-titles
@@ -258,12 +240,28 @@ nav ul li a:hover::after
     margin: 20px 0 40px;
 }
 
-@media (max-width: 330px)
+@media (max-width: 1100px)
 {
-    .tab-titles
+  .tab-titles
     {
+        gap: 3rem;
         justify-content: center;
     }
+}
+
+@media (max-width: 510px)
+{
+  .tab-titles
+    {
+        gap: 1.5rem;
+    }
+}
+
+.sub-title
+{
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 600;
+    color: white;
 }
 
 .tab-links
@@ -286,11 +284,7 @@ nav ul li a:hover::after
     transition: 0.5s;
 }
 
-.tab-links:hover::after
-{
-    width: 100%;
-}
-
+.tab-links:hover::after,
 .tab-links.active-link::after
 {
     width: 100%;
@@ -375,7 +369,7 @@ nav ul li a:hover::after
 
 .data-table
 {
-    overflow: auto;
+    overflow-x: auto;
 }
 
 table 
