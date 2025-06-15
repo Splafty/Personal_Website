@@ -160,13 +160,13 @@ nav ul li a:hover::after
 {
   #home {
     min-height: 70vh;
+    background-position: 55% 50%;
   }
 }
 
 .home-text 
 {
-    margin-top: clamp(10%, 10vh, 20%);
-    
+    margin-top: clamp(10%, 15vh, 30%);
 }
 
 .home-text h1
@@ -266,7 +266,7 @@ nav ul li a:hover::after
 
 .tab-links
 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 650;
     cursor: pointer;
     position: relative;
@@ -458,6 +458,7 @@ td
     max-width: 100%;
 }
 
+/* <!-- -------footer-col-1------- --> */
 .internet-col-1 ul li
 {
     list-style: none;
@@ -477,6 +478,7 @@ td
     color: #85FF25;
 }
 
+/* <!-- -------footer-col-2------- --> */
 .internet-col-2 .search-text
 {
     font-size: 18px;
@@ -485,12 +487,12 @@ td
 
 .internet-col-2 .search-block
 {
-    font-size: 14px;
+    font-size: 1rem;
     text-align: center;
     margin: 10px;
     border-color: white;
     border-radius: 5px;
-    width: clamp(12rem, 12rem + 5vw, 18rem);
+    width: clamp(13rem, 12rem + 5vw, 18rem);
     height: 40px;
     
 }
@@ -498,7 +500,7 @@ td
 .internet-col-2 .search-button
 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     padding: 10px 25px;
     background-color: transparent;
@@ -514,6 +516,7 @@ td
     border-color: #85FF25;
 }
 
+/* <!-- -------footer-col-3------- --> */
 .social-media
 {
     margin-top: 20px;
