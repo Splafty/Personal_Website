@@ -12,7 +12,7 @@
 
 p
 {
-    font-size: clamp(1rem, 2vw, 1.125rem)
+    font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 html
@@ -28,9 +28,17 @@ body
 
 .container
 {
+    height: 100%;
     padding: 20px clamp(5%, 8vw, 10%);
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.section-title
+{
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 550;
+    margin-bottom: 3px;
 }
 
 /* <!-- -------------hamburger menu------------- --> */
@@ -81,12 +89,32 @@ body
 
 .nav-links
 {
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px
+}
+
+.social-media-links
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.social-media-links i
+{
+    color: white;
+    cursor: pointer;
+    font-size: clamp(1.5rem, 1rem + 1vw, 1.75rem);
+    margin: 12px;
+    transition: 0.5s;
+}
+
+.social-media-links i:hover
+{
+    color: #85FF25;
 }
 
 @media (max-width: 800px)
@@ -150,7 +178,7 @@ nav ul li a:hover::after
 #home
 {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
@@ -159,7 +187,7 @@ nav ul li a:hover::after
 @media (max-width: 800px)
 {
   #home {
-    min-height: 70vh;
+    height: 70vh;
     background-position: 55% 50%;
   }
 }
@@ -172,7 +200,6 @@ nav ul li a:hover::after
 .home-text h1
 {
     font-size: clamp(1.5rem, 5vw, 4.125rem);
-    margin-top: 20px;
 }
 
 .home-text h1 span
@@ -182,9 +209,29 @@ nav ul li a:hover::after
 
 .home-text #catchphrase
 {
-    margin-top: 30px;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-bottom: 40px;
+    font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
     color: lightgray;
+}
+
+.home-text .home-button
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    cursor: pointer;
+    padding: clamp(0.5rem, 1.5vh, 1rem) clamp(1rem, 5vw, 4rem);
+    background-color: rgb(102, 190, 36);
+    color: #ffffff;
+    border-radius: 30px;
+    border: 0;
+    transition: 0.5s;
+}
+
+.home-button:hover
+{
+    color: rgb(102, 190, 36);
+    background-color: #ffffff;
 }
 
 /* <!-- -------------about------------- --> */
@@ -199,14 +246,14 @@ nav ul li a:hover::after
 
 .about-col-1
 {
-    flex-basis: 35%;
+    flex-basis: 32%;
 }
 
 .about-col-1 img
 {
     width: 100%;
     min-width: 260px;
-    max-width: 500px;
+    max-width: 480px;
     border-radius: 10px;
 }
 
@@ -220,6 +267,9 @@ nav ul li a:hover::after
 
 .about-col-2
 {
+    background-color: #1a1a1a;
+    padding: 16px 24px;
+    border-radius: 10px;
     flex-basis: 60%;
 }
 
@@ -237,7 +287,7 @@ nav ul li a:hover::after
     flex-wrap: wrap;
     justify-content: left;
     gap: clamp(1rem, 2vw, 2rem);
-    margin: 20px 0 40px;
+    margin: 20px 0 30px;
 }
 
 @media (max-width: 1100px)
@@ -255,13 +305,6 @@ nav ul li a:hover::after
     {
         gap: 1.5rem;
     }
-}
-
-.sub-title
-{
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 600;
-    color: white;
 }
 
 .tab-links
@@ -355,26 +398,89 @@ nav ul li a:hover::after
     }    
 }
 
+/* <!-- -------------technologies------------- --> */
+
+.technologies-grid-container
+{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.tech-card
+{
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.3s ease;
+}
+
+.tech-card:hover
+{
+    background-color: #222;
+}
+
+.tech-card h4
+{
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+}
+
+.tech-card span
+{
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.icon-wrapper
+{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.tech-card img
+{
+    width: 32px;
+    height: 32px;
+}
+
+.wordpress-bg   { background-color: rgba(33, 117, 155, 0.3); }
+.html-bg        { background-color: rgba(228, 77, 38, 0.3); }
+.css-bg         { background-color: rgba(38, 77, 228, 0.3); }
+.js-bg          { background-color: rgba(247, 223, 30, 0.3); }
+.rwd-bg         { background-color: rgba(94, 94, 94, 0.3); }
+.figma-bg       { background-color: rgba(26, 188, 254, 0.3); }
+.photoshop-bg   { background-color: rgba(49, 168, 255, 0.3); }
+.git-bg         { background-color: rgba(240, 80, 50, 0.3); }
+.github-bg      { background-color: rgba(51, 51, 51, 0.3); }
+.python-bg      { background-color: rgba(48, 105, 152, 0.3); }
+.mysql-bg       { background-color: rgba(0, 117, 143, 0.3); }
+.jira-bg        { background-color: rgba(0, 82, 204, 0.3); }
+
 /* <!-- -------------table------------- --> */
 #data 
 {
     padding: 10px 0px;
-    color: lightgray;
-}
-
-#data-title
-{
-    text-align: left;
 }
 
 .data-table
 {
+    color: lightgray;
     overflow-x: auto;
 }
 
 table 
 {
-    border: 3px solid lightgrey;
+    border: 3px solid lightgray;
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
@@ -408,14 +514,20 @@ td
 .format-information div
 {
     border-radius: 10px;
-    background: rgb(35, 35, 35);
+    background: #1a1a1a;
     padding: 30px;
+    transition: 0.5s;
+}
+
+.format-information div p
+{
+    color: #aaa;
     transition: 0.5s;
 }
 
 .format-information div h2
 {
-    font-size: 33px;
+    font-size: 2rem;
     font-weight: 550;
     margin-bottom: 15px;
 }
@@ -427,19 +539,23 @@ td
     cursor: pointer;
 }
 
+.format-information div:hover p
+{
+    color: white;
+}
+
 /* <!-- -------------internet------------- --> */
 #internet
 {
     padding-top: 40px;
-    padding-bottom: 40px;
     margin-top: 80px;
     width: 100%;
-    background: rgb(35, 35, 35);
+    background: #1a1a1a;
 }
 
 #internet .container .row h2
 {
-    margin-bottom: clamp(1rem, 1rem + 1vw, 2rem);
+    margin-bottom: clamp(1rem, 1rem + 1vw, 1.25rem);
     letter-spacing: 1px;
 }
 
@@ -534,4 +650,13 @@ td
 .social-media i:hover
 {
     color: #85FF25;
+}
+
+/* <!-- -------copyright------- --> */
+.copyright p
+{
+    font-size: 1rem;
+    color: lightgray;
+    padding-top: 40px;
+    text-align: center;
 }
