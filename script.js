@@ -8,7 +8,6 @@ sr.reveal(".home-text", {delay: 100, duration: 2000, reset: false, origin: "top"
 sr.reveal(".navigation-menu", {delay: 300, duration: 2000, reset: false, origin: "right"});
 sr.reveal(".about-col-1", {delay: -200, duration: 2000, origin: "left"});
 sr.reveal(".about-col-2", {delay: -200, duration: 2000, origin: "right"});
-sr.reveal(".technologies", {delay: -200, duration: 2000, origin: "left"});
 sr.reveal(".data-table-information", {delay: -200, duration: 2000, origin: "left"});
 sr.reveal(".format-information", {delay: 100, duration: 2000, origin: "bottom"}); 
 
