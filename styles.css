@@ -2,6 +2,78 @@
   outline: 1px solid red;
 } */
 /* <!-- -------------general------------- --> */
+:root
+{
+    /* <!-- ---general--- --> */
+    --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+
+    /* <!-- ---dark-mode--- --> */
+    --primary: hsl(95, 100%, 57%);
+    --primary-dark: hsl(95, 69%, 44%);
+    --bg-dark: hsl(0 0% 0%);
+    --bg: hsl(0 0% 5%);
+    --bg-light: hsl(0 0% 10%);
+    --text: hsl(0 0% 95%);
+    --text-muted: hsl(0 0% 70%);
+    --border: hsl(0 0% 30%);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --highlight: hsl(0 0% 60%);
+    --border-card: solid 1px var(--border);
+}
+
+/* <!-- ---light-mode--- --> */
+body.light
+{
+    --primary: hsl(210, 100%, 60%);
+    --primary-dark: hsl(210, 100%, 50%);
+    --bg-dark: hsl(0 0% 90%);
+    --bg: hsl(0 0% 95%);
+    --bg-light: hsl(0 0% 100%);
+    --text: hsl(0 0% 5%);
+    --text-muted: hsl(0 0% 30%);
+    --border: hsl(0 0% 30%);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --highlight: hsl(0 0% 100%);
+    --border-card: solid 1px var(--bg)
+}
+
+
+body.light #home
+{
+    background-image: url(images/background-light2.jpg);
+}
+
+/* <!-- ---switch--- --> */
+.dark-mode-icon
+{
+    display: none;
+}
+
+body.light .dark-mode-icon
+{
+    display: block;
+}
+
+body.light .light-mode-icon
+{
+    display: none;
+}
+
+.mode-button
+{
+    height: 40px;
+    width: 40px;
+    background-color: var(--text);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 *
 {
     margin: 0;
@@ -22,8 +94,8 @@ html
 
 body
 {
-    background: black;
-    color: white;
+    background: var(--bg-dark);
+    color: var(--text);
 }
 
 .container
@@ -47,7 +119,7 @@ body
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: var(--text);
     z-index: 101;
     position: fixed;
     transition: 0.5s;
@@ -57,7 +129,7 @@ body
 {
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: var(--text);
     z-index: 101;
     transition: 0.5s;
 }
@@ -65,7 +137,7 @@ body
 .menu-icon:hover,
 .menu-x:hover
 {
-    color: #85FF25;
+    color: var(--primary);
 }
 
 .side-menu
@@ -75,7 +147,7 @@ body
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: black;
+    background: var(--bg-dark);
     padding: 20px 20px;
     box-shadow: -2px 0 8px rgba(0,0,0,0.5);
     transition: right 0.3s ease;
@@ -105,7 +177,7 @@ body
 
 .social-media-links i
 {
-    color: white;
+    color: var(--text);
     cursor: pointer;
     font-size: clamp(1.5rem, 1rem + 1vw, 1.75rem);
     margin: 12px;
@@ -114,7 +186,7 @@ body
 
 .social-media-links i:hover
 {
-    color: #85FF25;
+    color: var(--primary);
 }
 
 @media (max-width: 800px)
@@ -140,6 +212,7 @@ nav
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 nav ul li
@@ -149,9 +222,16 @@ nav ul li
     margin: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 20px);
 }
 
+nav ul li.mode-button-li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+}
+
 nav ul li a
 {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -162,7 +242,7 @@ nav ul li a::after
     content: "";
     width: 0;
     height: 3px;
-    background: #85FF25;
+    background: var(--primary);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -204,14 +284,14 @@ nav ul li a:hover::after
 
 .home-text h1 span
 {
-    color: #85FF25;
+    color: var(--primary);
 }
 
 .home-text #catchphrase
 {
     margin-bottom: 40px;
     font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
-    color: lightgray;
+    color: var(--text-muted);
 }
 
 .home-text .home-button
@@ -221,8 +301,8 @@ nav ul li a:hover::after
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     cursor: pointer;
     padding: clamp(0.5rem, 1.5vh, 1rem) clamp(1rem, 5vw, 4rem);
-    background-color: rgb(102, 190, 36);
-    color: #ffffff;
+    background-color: var(--primary-dark);
+    color: var(--text);
     border-radius: 30px;
     border: 0;
     transition: 0.5s;
@@ -230,8 +310,8 @@ nav ul li a:hover::after
 
 .home-button:hover
 {
-    color: rgb(102, 190, 36);
-    background-color: #ffffff;
+    color: var(--primary-dark);
+    background-color: var(--text);
 }
 
 /* <!-- -------------about------------- --> */
@@ -255,6 +335,8 @@ nav ul li a:hover::after
     min-width: 260px;
     max-width: 480px;
     border-radius: 10px;
+    margin: 6px;
+    box-shadow: var(--shadow);
 }
 
 @media (max-width: 1100px)
@@ -267,10 +349,12 @@ nav ul li a:hover::after
 
 .about-col-2
 {
-    background-color: #1a1a1a;
+    background-color: var(--bg-light);
     padding: 16px 24px;
     border-radius: 10px;
     flex-basis: 60%;
+    margin: 6px;
+    box-shadow: var(--shadow);
 }
 
 @media (max-width: 1100px)
@@ -320,7 +404,7 @@ nav ul li a:hover::after
     content: "";
     width: 0;
     height: 3px;
-    background: rgb(102, 190, 36);
+    background: var(--primary-dark);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -342,7 +426,7 @@ nav ul li a:hover::after
 .tab-contents ul li span
 {
     margin-top: 10px;
-    color: rgb(102, 190, 36); 
+    color: var(--primary-dark); 
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 550;
 }
@@ -410,13 +494,14 @@ nav ul li a:hover::after
 
 .tech-card
 {
-    background-color: #1a1a1a;
+    background-color: var(--bg-light);
     border-radius: 10px;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     transition: background 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .tech-card:hover
@@ -466,6 +551,21 @@ nav ul li a:hover::after
 .mysql-bg       { background-color: rgba(0, 117, 143, 0.3); }
 .jira-bg        { background-color: rgba(0, 82, 204, 0.3); }
 
+
+body.light .wordpress-bg   { background-color: rgba(33, 117, 155, 0.5); } 
+body.light .html-bg        { background-color: rgba(228, 77, 38, 0.5); }
+body.light .css-bg         { background-color: rgba(38, 77, 228, 0.5); }
+body.light .js-bg          { background-color: rgba(247, 223, 30, 0.5); }
+body.light .rwd-bg         { background-color: rgba(94, 94, 94, 0.5); }
+body.light .figma-bg       { background-color: rgba(26, 188, 254, 0.5); }
+body.light .photoshop-bg   { background-color: rgba(49, 168, 255, 0.5); }
+body.light .git-bg         { background-color: rgba(240, 80, 50, 0.5); }
+body.light .github-bg      { background-color: rgba(51, 51, 51, 0.5); }
+body.light .python-bg      { background-color: rgba(48, 105, 152, 0.5); }
+body.light .mysql-bg       { background-color: rgba(0, 117, 143, 0.5); }
+body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
+
+
 /* <!-- -------------table------------- --> */
 #data 
 {
@@ -474,13 +574,13 @@ nav ul li a:hover::after
 
 .data-table
 {
-    color: lightgray;
+    color: var(--text-muted);
     overflow-x: auto;
 }
 
 table 
 {
-    border: 3px solid lightgray;
+    border: 3px solid var(--text-muted);
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
@@ -488,7 +588,7 @@ table
 
 th, td 
 {
-    border: 1px solid lightgray;
+    border: 1px solid var(--text-muted);
     padding: 11px;
 }
 
@@ -514,8 +614,9 @@ td
 .format-information div
 {
     border-radius: 10px;
-    background: #1a1a1a;
+    background: var(--bg-light);
     padding: 30px;
+    box-shadow: var(--shadow);
     transition: 0.5s;
 }
 
@@ -541,7 +642,7 @@ td
 
 .format-information div:hover p
 {
-    color: white;
+    color: var(--text);
 }
 
 /* <!-- -------------internet------------- --> */
@@ -550,7 +651,7 @@ td
     padding-top: 40px;
     margin-top: 80px;
     width: 100%;
-    background: #1a1a1a;
+    background: var(--bg-light);
 }
 
 #internet .container .row h2
@@ -583,7 +684,7 @@ td
 
 .internet-col-1 ul li a
 {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     font-size: 20px;
     transition: 0.5s;
@@ -591,7 +692,7 @@ td
 
 .internet-col-1 ul li a:hover
 {
-    color: #85FF25;
+    color: var(--primary);
 }
 
 /* <!-- -------footer-col-2------- --> */
@@ -606,7 +707,7 @@ td
     font-size: 1rem;
     text-align: center;
     margin: 10px;
-    border-color: white;
+    border-color: var(--border-card);
     border-radius: 5px;
     width: clamp(13rem, 12rem + 5vw, 18rem);
     height: 40px;
@@ -620,16 +721,16 @@ td
     cursor: pointer;
     padding: 10px 25px;
     background-color: transparent;
-    color: white;
+    color: var(--text);
     border-radius: 10px;
-    border-color: white;
+    border-color: var(--border-card);
     transition: 0.5s;
 }
 
 .internet-col-2 .search-button:hover
 {
-    color: #85FF25;
-    border-color: #85FF25;
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 /* <!-- -------footer-col-3------- --> */
@@ -640,7 +741,7 @@ td
 
 .social-media i
 {
-    color: white;
+    color: var(--text);
     cursor: pointer;
     font-size: clamp(1.5rem, 2vw, 1.625rem);
     margin: 10px;
@@ -649,14 +750,14 @@ td
 
 .social-media i:hover
 {
-    color: #85FF25;
+    color: var(--primary);
 }
 
 /* <!-- -------copyright------- --> */
 .copyright p
 {
     font-size: 1rem;
-    color: lightgray;
+    color: var(--text-muted);
     padding-top: 40px;
     text-align: center;
 }

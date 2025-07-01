@@ -15,7 +15,7 @@ sr.reveal(".format-information", {delay: 100, duration: 2000, origin: "bottom"})
 function fetchCSV() 
 {
     // Fetch CSV file
-    fetch("./MOCK_DATA.csv") // <-----------------------------------------------------------  Write your CSV file name here! If not the function will do a flip
+    fetch("./files/MOCK_DATA.csv") // <-----------------------------------------------------------  Write your CSV file name here! If not the function will do a flip
         .then(response => response.text()) // Convert the response into plain text
         .then(data => 
             {
@@ -78,16 +78,16 @@ function openFile(dataFile)
     window.open(dataFile);
 }
 
-function openFileCSV() 
+function openFileCSV(dataFile) 
 {
     const newWindow = window.open()
     
-    fetch('MOCK_DATA.csv')
+    fetch(dataFile)
     .then(response => response.text())
     .then(content => 
     {
         newWindow.document.write('<pre>' + content + '</pre>');
-        newWindow.document.title = 'MOCK_DATA.csv';
+        newWindow.document.title = dataFile;
         newWindow.document.body.style.backgroundColor = "black";
         newWindow.document.body.style.color = "white";
         newWindow.document.body.style.fontSize = 16;
@@ -120,4 +120,17 @@ document.addEventListener("DOMContentLoaded", function()
     {
         el.textContent = year;
     });
+});
+
+// Dark mode / Light mode switch
+function toggleMode() {
+    const isLight = document.body.classList.toggle("light");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        document.body.classList.add("light");
+    }
 });
