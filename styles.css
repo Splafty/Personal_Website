@@ -349,7 +349,7 @@ nav ul li a:hover::after
 
 .about-col-2
 {
-    background-color: var(--bg-light);
+    background: var(--gradient);
     padding: 16px 24px;
     border-radius: 10px;
     flex-basis: 60%;
@@ -494,19 +494,18 @@ nav ul li a:hover::after
 
 .tech-card
 {
-    background-color: var(--bg-light);
+    background: var(--gradient);
     border-radius: 10px;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    transition: background 0.3s ease;
     box-shadow: var(--shadow);
 }
 
 .tech-card:hover
 {
-    background-color: #222;
+    background: var(--gradient-hover);
 }
 
 .tech-card h4
@@ -519,7 +518,7 @@ nav ul li a:hover::after
 .tech-card span
 {
     font-size: 0.9rem;
-    color: #aaa;
+    color: var(--text-muted);
 }
 
 .icon-wrapper
@@ -582,6 +581,7 @@ table
 {
     border: 3px solid var(--text-muted);
     border-collapse: collapse;
+    background-color: var(--bg-light);
     width: 100%;
     margin-top: 20px;
 }
@@ -594,6 +594,7 @@ th, td
 
 th 
 {
+    color: var(--text);
     text-align: center;
 }
 
@@ -622,7 +623,7 @@ td
 
 .format-information div p
 {
-    color: #aaa;
+    color: var(--text-muted);
     transition: 0.5s;
 }
 
@@ -635,7 +636,7 @@ td
 
 .format-information div:hover
 {
-    background: rgb(75, 145, 25);
+    background: var(--primary-dark);
     transform: translateY(-10px);
     cursor: pointer;
 }
