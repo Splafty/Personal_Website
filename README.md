@@ -11,7 +11,7 @@
 
 ## 📂 Overview
 
-This repository contains all the files like HTML, CSS, JS, and assets—used to deploy and maintain my website.  
+This repository contains all the files, like HTML, CSS, JS, and assets, used to deploy and maintain my website.  
 
 The site features:
 - A hero section/landing page that briefly introduces me
@@ -25,6 +25,9 @@ The site features:
 
 ## 🛠️ Tech Stack
 
-- **HTML5 · CSS3 · JavaScript · RWD**
+- **HTML** – The structure of the web pages, defining layout and content.
+- **CSS** – Styling the interface: colors, fonts, spacing, and layout adjustments.
+- **JavaScript** – Used for interactive elements on the frontend, like toggling tabs and dynamic content updates.
+- **RWD (Responsive Web Design)** – Ensures the website looks and works well on all screen sizes (desktop, tablet, mobile).
 
 ---
