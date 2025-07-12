@@ -25,9 +25,10 @@ The site features:
 
 ## 🛠️ Tech Stack
 
-- **HTML** – The structure of the web pages, defining layout and content.
-- **CSS** – Styling the interface: colors, fonts, spacing, and layout adjustments.
-- **JavaScript** – Used for interactive elements on the frontend, like toggling tabs and dynamic content updates.
-- **RWD (Responsive Web Design)** – Ensures the website looks and works well on all screen sizes (desktop, tablet, mobile).
+- **HTML** – The structure of the web pages, defining layout and content
+- **CSS** – Styling the interface: colors, fonts, spacing, and layout adjustments
+- **JavaScript** – Used for interactive elements on the frontend, like toggling tabs and dynamic content updates
+- **RWD (Responsive Web Design)** – Ensures the website looks and works well on all screen sizes (desktop, tablet, mobile)
+- **GitHub Pages** – Hosts the final version of the website publicly
 
 ---
