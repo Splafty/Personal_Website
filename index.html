@@ -256,45 +256,64 @@
     
     <section id="data">
         <div class="container">
-            <div class="data-table-information">
-                <h1 class="section-title">Data Table</h1>
-                <p>The data set captures essential information about employees of an IT company, including personal details, employment specifics, and departmental affiliations. The structure is tabular, organized in rows and columns, where each row corresponds to a unique employee, and each column represents a specific attribute or characteristic.</p>
-                <div class="data-table">
-                    <table id="dataTable">
-                        <thead>
-                            <tr>
-                                <th>Employee ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                                <th>Email</th>
-                                <th>Country</th>
-                                <th>Hire Date</th>
-                                <th>Working Remotely</th>
-                                <th>Salary</th>
-                                <th>Department</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- data will be imported here -->
-                        </tbody>
-                    </table>
-                </div>
+            <div class="project-section-information">
+                <h1 class="section-title">My Projects</h1>
+                <p>In this section, you will find an overview of my key projects. Each entry represents a different project, and clicking on one will open a new tab with its GitHub repository. The repository's README file provides a detailed description of the project, including its purpose, features, and the technologies used.</p>
             </div>
 
         <!-- -------------descriptions and files------------- -->
-            <div class="format-information">
-                <div onclick="openFile('files/MOCK_DATA.xml')">
-                    <h2>XML</h2>
-                    <p>XML (eXtensible Markup Language) is a hierarchical data format using tags to define elements. It allows for nested and structured data. It's human-readable and suitable for complex data structures.</p>
+            <div class="project-information">
+                <div class="main-div" onclick="window.open('https://github.com/Splafty/Personal_Website', '_blank')">
+                    <h2>My Personal Website</h2>
+                    <p>Personal website built with HTML, CSS, and JavaScript, introducing who I am and showcasing my projects, and contact information.</p>
+                    <div class="project-technologies">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                            <li>RWD</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                    </div>
                 </div>
-                <div onclick="openFileCSV('files/MOCK_DATA.csv')">
-                    <h2>CSV</h2>
-                    <p>CSV (Comma-Separated Values) is a simple, text-based format where each line represents a record, and fields are separated by commas. It's easy to read and widely supported but may struggle with complex structures.</p>
+
+                <div class="main-div" onclick="window.open('https://github.com/Splafty/CeneoWebScraperPH', '_blank')">
+                    <h2>Ceneo Web Scraper</h2>
+                    <p>A Flask-powered web scraper built with Python, designed to fetch product reviews from Ceneo.pl, automatically analyze them, and present them in the form of easy-to-read statistics.</p>
+                    <div class="project-technologies">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                            <li>RWD</li>
+                            <li>Bootsrap</li>
+                            <li>Chart.js</li>
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>Jinja2</li>
+                            <li>BeautifulSoup4</li>
+                            <li>Requests</li>
+                            <li>Pandas</li>
+                            <li>Numpy</li>
+                        </ul>
+                    </div>
                 </div>
-                <div onclick="openFile('files/MOCK_DATA.json')">
-                    <h2>JSON</h2>
-                    <p>JSON (JavaScript Object Notation) is a lightweight, text-based format for data interchange. It uses key-value pairs and supports nested structures. It's widely used in web development and easy for both humans and machines to read.</p>
+
+                <div class="main-div" onclick="window.open('https://github.com/Splafty/EDI', '_blank')">
+                    <h2>Electronic Data Interchange</h2>
+                    <p>Dynamic web app built with HTML, CSS, and JavaScript, retrieving and visualizing data from a custom API generated using Mockaroo.</p>
+                    <div class="project-technologies">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                            <li>RWD</li>
+                            <li>Fetch API</li>
+                            <li>Chart.js</li>
+                            <li>Mockaroo</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

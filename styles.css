@@ -8,8 +8,9 @@
     --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
 
     /* <!-- ---dark-mode--- --> */
-    --primary: hsl(95, 100%, 57%);
-    --primary-dark: hsl(95, 69%, 44%);
+    --primary: hsl(95, 100%, 55%);
+    --primary-dark: hsl(95, 69%, 42%);
+    --primary-very-dark: hsl(95, 69%, 37%);
     --bg-dark: hsl(0 0% 0%);
     --bg: hsl(0 0% 5%);
     --bg-light: hsl(0 0% 10%);
@@ -27,6 +28,7 @@ body.light
 {
     --primary: hsl(210, 100%, 60%);
     --primary-dark: hsl(210, 100%, 50%);
+    --primary-very-dark: hsl(210, 100%, 45%);
     --bg-dark: hsl(0 0% 90%);
     --bg: hsl(0 0% 95%);
     --bg-light: hsl(0 0% 100%);
@@ -80,6 +82,7 @@ body.light .light-mode-icon
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    transition: background-image 0.5s ease;
 }
 
 p
@@ -604,53 +607,80 @@ td
 }
 
 /* <!-- -------------format info------------- --> */
-.format-information
+.project-information
 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     grid-gap: clamp(30px, 5vw, 40px);
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.format-information div
+.project-information .main-div
 {
     border-radius: 10px;
-    background: var(--bg-light);
+    background: var(--gradient);
     padding: 30px;
     box-shadow: var(--shadow);
     transition: 0.5s;
 }
 
-.format-information div p
-{
-    color: var(--text-muted);
-    transition: 0.5s;
-}
-
-.format-information div h2
+.project-information .main-div h2
 {
     font-size: 2rem;
     font-weight: 550;
     margin-bottom: 15px;
 }
 
-.format-information div:hover
+.project-information .main-div p
+{
+    color: var(--text-muted);
+    transition: 0.5s;
+}
+
+.project-information .main-div:hover p
+{
+    color: var(--text);
+}
+
+.project-information .main-div:hover
 {
     background: var(--primary-dark);
     transform: translateY(-10px);
     cursor: pointer;
 }
 
-.format-information div:hover p
+.project-information .main-div .project-technologies
 {
-    color: var(--text);
+    margin-top: 10px;
+}
+
+.project-information .main-div ul
+{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-information .main-div li
+{
+    background: var(--bg-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.project-information .main-div:hover li
+{
+    background: var(--primary-very-dark);
 }
 
 /* <!-- -------------internet------------- --> */
 #internet
 {
     padding-top: 40px;
-    margin-top: 80px;
+    margin-top: 60px;
     width: 100%;
     background: var(--bg-light);
 }
