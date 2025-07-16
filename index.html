@@ -2,377 +2,426 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Henzolt - About me</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piotr Henzolt - About me</title>
+  <link rel="stylesheet" href="styles.css">
+    <!-- -------------scrollreveal------------- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <!-- --------hamburger menu-------- -->
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
+  <!-- --------hamburger menu-------- -->
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="side-menu" id="sideMenu">
+      <i class="fa-solid fa-x menu-x" onclick="toggleMenu()"></i>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="social-media-links">
+        <p>Socials</p>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- -------------home------------- -->
+  <section id="home">
+    <div class="container">
+      <div class="navigation-menu">
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mode-button-li">
+              <p class="mode-button" onclick="toggleMode()">
+                <svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EAC452"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+                <svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M560-80q-82 0-155-31.5t-127.5-86Q223-252 191.5-325T160-480q0-83 31.5-155.5t86-127Q332-817 405-848.5T560-880q54 0 105 14t95 40q-91 53-145.5 143.5T560-480q0 112 54.5 202.5T760-134q-44 26-95 40T560-80Z"/></svg>
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="home-text">
+        <p>IT Student</p>
+        <h1>HI, I'M <span>PIOTR</span><br>I AM A BEGINNER<br>FULL STACK<br>WEB DEVELOPER</h1>
+        <p id="catchphrase"><i class="fa-solid fa-location-dot"></i> Kraków, Małopolska, Poland</p>
+        <a href="#about" class="home-button">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------about------------- -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img id="about-image" src="images/my_image.png">
         </div>
-        <div class="side-menu" id="sideMenu">
-            <i class="fa-solid fa-x menu-x" onclick="toggleMenu()"></i>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#data">Data</a></li>
-                <li><a href="#internet">Internet</a></li>
+
+        <div class="about-col-2">
+          <h1 class="section-title">About me</h1>
+          <p>My name is Piotr Henzolt, I aspire to become a web developer with a focus on creating innovative and user-friendly web applications. My goal is to master various web technologies, stay updated on industry trends, and contribute to projects that make a positive impact. I've enjoyed building things since i was little and coding/designing is just like building - that's why I like it!</p>
+          
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab(event, 'Education')">Education</p>
+            <p class="tab-links" onclick="opentab(event, 'Work')">Work</p>
+            <p class="tab-links" onclick="opentab(event, 'Achievements')">Achievements</p>
+            <p class="tab-links" onclick="opentab(event, 'Hobbies')">Hobbies</p>
+          </div>
+
+          <!-- Tab contents -->
+          <div class="tab-contents active-tab show" id="Education">
+            <ul>
+              <li><span class="name">University</span><br>Cracow University of Economics</li>
+              <li><span class="name">Field of study</span><br>Applied Informatics</li>
+              <li><span class="name">Why this field</span><br>I've always been passionate about technology and programming. Studying IT allows me to explore my interests in depth. I've always been good with computers and everyone came to me if they had a tech-related problem. For me out of all the fields Applied Informatics was the obvious choice.</li>
+              <li><span class="name">Expectations</span><br>I hope to gain a solid understanding of web developement, programming principles, develop practical skills, and contribute to innovative projects. I also hope to level up my teamwork as well as communication. I expect to get a well-paid job that I will enjoy after completing this course.</li>
             </ul>
-            <div class="social-media-links">
-                <p>Socials</p>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </div>
+            <a href="/files/CV_Piotr_Henzolt.pdf" download class="download-button">Download CV</a>
+          </div>
+
+          <div class="tab-contents" id="Work">
+            <ul>
+              <li class="work-entry">
+                <div class="work-date">07.2018 - Present <span class="date">(<span id="time-worked-freelance"></span>)</span></div>
+                <div class="work-information">
+                  <span class="name">Freelancer</span>
+                </div>
+                <ul class="responsibilities">
+                  <li>● Graphic design: profile pictures, banners, thumbnails, logos, UI/HUD elements, and apparel prints</li>
+                  <li>● Photo editing and retouching, color correction, object removal, lighting adjustments</li>
+                  <li>● Video editing and post-production, color grading, audio syncing, adding subtitles</li>
+                  <li>● Discord server creation, administration, and ongoing management</li>
+                </ul>
+                <div class="project-technologies">
+                  <ul>
+                    <li class="wrok-technology">Figma</li>
+                    <li class="wrok-technology">Photoshop</li>
+                    <li class="wrok-technology">Illustrator</li>
+                    <li class="wrok-technology">Premiere Pro</li>
+                    <li class="wrok-technology">Discord</li>
+                    <li class="wrok-technology">and more...</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="work-entry">
+                <div class="work-date">09.2019 - 06.2022 <span class="date">(2 years 10 months)</span></div>
+                <div class="work-information">
+                  <span class="name">Website Administrator</span>
+                  <span class="date">| IV LO im. K.K. Baczyńskiego | Olkusz</span>
+                </div>
+                <ul class="responsibilities">
+                  <li>● Served as the main administrator of the official school website</li>
+                  <li>● Created and edited subpages and posts, managed cloud data, and edited documentation</li>
+                  <li>● Provided IT helpdesk support, hardware configuration, software issue resolution, and technical maintenance</li>
+                </ul>
+                <div class="project-technologies">
+                  <ul>
+                    <li class="wrok-technology">WordPress</li>
+                    <li class="wrok-technology">HTML</li>
+                    <li class="wrok-technology">Photoshop</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="Achievements">
+            <ul>
+              <li><span class="name">School</span></li>
+              <li>● Received the Rector's Scholarship at the Cracow University of Economics.</li>
+              <li>● Served as the main administrator of my former school's website.</li>
+              <li>● Provided IT support to school staff, including hardware setup, software troubleshooting, and maintenance of tech equipment.</li>
+              <li>● Completed C/C++ courses at the Jagiellonian University with a final grade of 5 (equivalent to A).</li>
+              <li>● Managed a school shop at the age of 15.</li>
+              <li><span class="name">Free Time</span></li>
+              <li>● Founded and managed a gaming group of over 150 players.</li>
+              <li>● Created and edited 30+ YouTube videos as well as designing thumbnails for each of them.</li>
+              <li>● Built a fully customized gaming setup from scratch.</li>
+              <li>● Passed the driving test on the first attempt.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="Hobbies">
+            <ul>
+              <li><span class="name">Designing/Coding</span><br>I always liked building, and designing/coding is just like building! You can create whatever you can imagine.</li>
+              <li><span class="name">Cooking</span><br>I recently started cooking for myself and I found out that I actually enjoy it. Being able to add whatever you want to your dish and make it as you like is great. Seeing the result and enjoying the taste is very fulfilling.</li>
+              <li><span class="name">Gaming</span><br>Strategy, MMORPG, Battle Royale, Survival games are types of games I like to play with my friends. They are a great decelerator and can bring you a lot of joy.</li>
+              <li><span class="name">Motorcycles</span><br>My dad rode motorcycles since he was a teenager and that's how this passion was passed on to me. Now I have my own motorcycle and I ride it from time to time.</li>
+              <li><span class="name">Cars</span><br>My interest in cars started only recently, but it's been growing quickly. I have been exploring different car models, learning how engines work, and watching videos about car builds and reviews. I am currently looking for one for myself.</li>
+              <li><span class="name">Badminton</span><br>My godmother was the Polish badminton champion and we alwas played when I was little, and that's how the passion was born. Right now I'm playing it once a week during my PE classes.</li>
+              <li><span class="name">Books</span><br>Fantasy and science-fiction books are my go-to's, one of my favorite authors is Andrzej Pilipuk. I often reach for the books I read before and I always enjoy reading them again.</li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
+    <!-- -------------technologies------------- -->
+  <section id="#tech-stack">
+    <div class="technologies">
+      <div class="container technologies">
+        <h1 class="section-title">Current technologies</h1>
+        <p>
+        I'm currently using a range of modern technologies that enable me to build highly functional solutions.
+        These are some of my main ones.
+        </p>
+        <div class="technologies-grid-container">
+          <div class="tech-card">
+            <div class="icon-wrapper wordpress-bg">
+              <img alt="WordPress" src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg">
+            </div>
+            <div>
+              <h4>WordPress</h4>
+              <p><span>CMS Platform</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper html-bg">
+              <img alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            </div>
+            <div>
+              <h4>HTML</h4>
+              <p><span>Markup Language</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper css-bg">
+              <img alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+            </div>
+            <div>
+              <h4>CSS</h4>
+              <p><span>Style Sheet Language</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper js-bg">
+              <img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            </div>
+            <div>
+              <h4>JavaScript</h4>
+              <p><span>Programming Language</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper rwd-bg">
+              <img alt="RWD" src="https://www.svgrepo.com/show/261938/responsive.svg">
+            </div>
+            <div>
+              <h4>RWD</h4>
+              <p><span>Responsive Web Design</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper figma-bg">
+              <img alt="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+            </div>
+            <div>
+              <h4>Figma</h4>
+              <p><span>Design Tool</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper photoshop-bg">
+              <img alt="Photoshop" src="https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg">
+            </div>
+            <div>
+              <h4>Photoshop</h4>
+              <p><span>Image Editing</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper git-bg">
+              <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+            </div>
+            <div>
+              <h4>Git</h4>
+              <p><span>Version Control</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper github-bg">
+              <img alt="GitHub" src="https://cdn.simpleicons.org/github/ffffff">
+            </div>
+            <div>
+              <h4>GitHub</h4>
+              <p><span>Code Hosting</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper python-bg">
+              <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+            </div>
+            <div>
+              <h4>Python</h4>
+              <p><span>Programming Language</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper mysql-bg">
+              <img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+            </div>
+            <div>
+              <h4>MySQL</h4>
+              <p><span>Relational Database</span></p>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="icon-wrapper jira-bg">
+              <img alt="Jira" src="https://cdn.simpleicons.org/jira/0052CC">
+            </div>
+            <div>
+              <h4>Jira</h4>
+              <p><span>Project Management</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------table and data------------- -->
+  <section id="projects">
+    <div class="container">
+      <div class="project-section-information">
+        <h1 class="section-title">My Projects</h1>
+        <p>In this section, you will find an overview of my key projects. Each entry represents a different project, and clicking on one will open a new tab with its GitHub repository. The repository's README file provides a detailed description of the project, including its purpose, features, and the technologies used.</p>
+      </div>
+
+    <!-- -------------descriptions and files------------- -->
+      <div class="project-information">
+        <div class="main-div" onclick="window.open('https://github.com/Splafty/Personal_Website', '_blank')">
+          <h2>My Personal Website</h2>
+          <p>Personal website built with HTML, CSS, and JavaScript, introducing who I am and showcasing my projects, and contact information.</p>
+          <div class="project-technologies">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+              <li>RWD</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-div" onclick="window.open('https://github.com/Splafty/CeneoWebScraperPH', '_blank')">
+          <h2>Ceneo Web Scraper</h2>
+          <p>A Flask-powered web scraper built with Python, designed to fetch product reviews from Ceneo.pl, automatically analyze them, and present them in the form of easy-to-read statistics.</p>
+          <div class="project-technologies">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+              <li>RWD</li>
+              <li>Bootsrap</li>
+              <li>Chart.js</li>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>Jinja2</li>
+              <li>BeautifulSoup4</li>
+              <li>Requests</li>
+              <li>Pandas</li>
+              <li>Numpy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-div" onclick="window.open('https://github.com/Splafty/EDI', '_blank')">
+          <h2>Electronic Data Interchange</h2>
+          <p>Dynamic web app built with HTML, CSS, and JavaScript, retrieving and visualizing data from a custom API generated using Mockaroo.</p>
+          <div class="project-technologies">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+              <li>RWD</li>
+              <li>Fetch API</li>
+              <li>Chart.js</li>
+              <li>Mockaroo</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------contact and footer------------- -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <!-- mini navbar -->
+        <div class="internet-col-1 internet-column">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- internet -->
+        <div class="internet-col-2 internet-column">
+          <h2>Internet</h2>
+          <!-- search -->
+          <form action="http://bing.com" target="_blank">
     
-    <!-- -------------home------------- -->
-    <section id="home">
-        <div class="container">
-            <div class="navigation-menu">
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#data">Data</a></li>
-                        <li><a href="#internet">Internet</a></li>
-                        <li class="mode-button-li">
-                            <p class="mode-button" onclick="toggleMode()">
-                                <svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EAC452"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
-                                <svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M560-80q-82 0-155-31.5t-127.5-86Q223-252 191.5-325T160-480q0-83 31.5-155.5t86-127Q332-817 405-848.5T560-880q54 0 105 14t95 40q-91 53-145.5 143.5T560-480q0 112 54.5 202.5T760-134q-44 26-95 40T560-80Z"/></svg>
-                            </p>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="home-text">
-                <p>IT Student</p>
-                <h1>HI, I'M <span>PIOTR</span><br>I AM A BEGINNER<br>FULL STACK<br>WEB DEVELOPER</h1>
-                <p id="catchphrase"><i class="fa-solid fa-location-dot"></i> Kraków, Małopolska, Poland</p>
-                <a href="#about" class="home-button">About me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- -------------about------------- -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img id="about-image" src="images/my_image.png">
-                </div>
-
-                <div class="about-col-2">
-                    <h1 class="section-title">About me</h1>
-                    <p>My name is Piotr Henzolt, I aspire to become a web developer with a focus on creating innovative and user-friendly web applications. My goal is to master various web technologies, stay updated on industry trends, and contribute to projects that make a positive impact. I've enjoyed building things since i was little and coding/designing is just like building - that's why I like it!</p>
-                    
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab(event, 'University')">University</p>
-                        <p class="tab-links" onclick="opentab(event, 'Achievements')">Achievements</p>
-                        <p class="tab-links" onclick="opentab(event, 'Hobbies')">Hobbies</p>
-                    </div>
-
-                    <div class="tab-contents active-tab show" id="University">
-                        <ul>
-                            <li><span>University</span><br>Cracow University of Economics</li>
-                            <li><span>Field of study</span><br>Applied Informatics</li>
-                            <li><span>Why this field</span><br>I've always been passionate about technology and programming. Studying IT allows me to explore my interests in depth. I've always been good with computers and everyone came to me if they had a tech-related problem. For me out of all the fields Applied Informatics was the obvious choice.</li>
-                            <li><span>Expectations</span><br>I hope to gain a solid understanding of web developement, programming principles, develop practical skills, and contribute to innovative projects. I also hope to level up my teamwork as well as communication. I expect to get a well-paid job that I will enjoy after completing this course.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="Achievements">
-                        <ul class="styled-list">
-                            <li><span>School</span></li>
-                            <li>● Received the Rector's Scholarship at the Cracow University of Economics.</li>
-                            <li>● Served as the main administrator of my former school's website.</li>
-                            <li>● Provided IT support to school staff, including hardware setup, software troubleshooting, and maintenance of tech equipment.</li>
-                            <li>● Completed C/C++ courses at the Jagiellonian University with a final grade of 5 (equivalent to A).</li>
-                            <li>● Managed a school shop at the age of 15.</li>
-                            <li><span>Free Time</span></li>
-                            <li>● Founded and managed a gaming group of over 150 players.</li>
-                            <li>● Created and edited 30+ YouTube videos as well as designing thumbnails for each of them.</li>
-                            <li>● Built a fully customized gaming setup from scratch.</li>
-                            <li>● Passed the driving test on the first attempt.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="Hobbies">
-                        <ul>
-                            <li><span>Designing/Coding</span><br>I always liked building, and designing/coding is just like building! You can create whatever you can imagine.</li>
-                            <li><span>Cooking</span><br>I recently started cooking for myself and I found out that I actually enjoy it. Being able to add whatever you want to your dish and make it as you like is great. Seeing the result and enjoying the taste is very fulfilling.</li>
-                            <li><span>Gaming</span><br>Strategy, MMORPG, Battle Royale, Survival games are types of games I like to play with my friends. They are a great decelerator and can bring you a lot of joy.</li>
-                            <li><span>Motorcycles</span><br>My dad rode motorcycles since he was a teenager and that's how this passion was passed on to me. Now I have my own motorcycle and I ride it from time to time.</li>
-                            <li><span>Cars</span><br>My interest in cars started only recently, but it's been growing quickly. I have been exploring different car models, learning how engines work, and watching videos about car builds and reviews. I am currently looking for one for myself.</li>
-                            <li><span>Badminton</span><br>My godmother was the Polish badminton champion and we alwas played when I was little, and that's how the passion was born. Right now I'm playing it once a week during my PE classes.</li>
-                            <li><span>Books</span><br>Fantasy and science-fiction books are my go-to's, one of my favorite authors is Andrzej Pilipuk. I often reach for the books I read before and I always enjoy reading them again.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <label for="fname" class="search-text">What are you looking for:</label><br>
+          
+            <input type="text" id="q" name="q" placeholder="Search the web" class="search-block"><br>
+          
+            <input type="submit" value="Search" class="search-button">
+          
+          </form>
         </div>
 
-        <!-- -------------technologies------------- -->
-
-        <div id="technologies">
-            <div class="container technologies">
-                <h1 class="section-title">Current technologies</h1>
-                <p>
-                I'm currently using a range of modern technologies that enable me to build highly functional solutions.
-                These are some of my main ones.
-                </p>
-                <div class="technologies-grid-container">
-                    <div class="tech-card">
-                        <div class="icon-wrapper wordpress-bg">
-                            <img alt="WordPress" src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg">
-                        </div>
-                        <div>
-                            <h4>WordPress</h4>
-                            <p><span>CMS Platform</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper html-bg">
-                            <img alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-                        </div>
-                        <div>
-                            <h4>HTML</h4>
-                            <p><span>Markup Language</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper css-bg">
-                            <img alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-                        </div>
-                        <div>
-                            <h4>CSS</h4>
-                            <p><span>Style Sheet Language</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper js-bg">
-                            <img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-                        </div>
-                        <div>
-                            <h4>JavaScript</h4>
-                            <p><span>Programming Language</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper rwd-bg">
-                            <img alt="RWD" src="https://www.svgrepo.com/show/261938/responsive.svg">
-                        </div>
-                        <div>
-                            <h4>RWD</h4>
-                            <p><span>Responsive Web Design</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper figma-bg">
-                            <img alt="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
-                        </div>
-                        <div>
-                            <h4>Figma</h4>
-                            <p><span>Design Tool</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper photoshop-bg">
-                            <img alt="Photoshop" src="https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg">
-                        </div>
-                        <div>
-                            <h4>Photoshop</h4>
-                            <p><span>Image Editing</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper git-bg">
-                            <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-                        </div>
-                        <div>
-                            <h4>Git</h4>
-                            <p><span>Version Control</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper github-bg">
-                            <img alt="GitHub" src="https://cdn.simpleicons.org/github/ffffff">
-                        </div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <p><span>Code Hosting</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper python-bg">
-                            <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-                        </div>
-                        <div>
-                            <h4>Python</h4>
-                            <p><span>Programming Language</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper mysql-bg">
-                            <img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
-                        </div>
-                        <div>
-                            <h4>MySQL</h4>
-                            <p><span>Relational Database</span></p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="icon-wrapper jira-bg">
-                            <img alt="Jira" src="https://cdn.simpleicons.org/jira/0052CC">
-                        </div>
-                        <div>
-                            <h4>Jira</h4>
-                            <p><span>Project Management</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- contact -->
+        <div class="internet-col-3 internet-column">
+          <h2>Contact</h2>
+          <p>Piotr Henzolt<br>piotr.henzolt@gmail.com</p>
+          <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; <span id="current-date"></span> | Piotr Henzolt</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- -------------table and data------------- -->
-    
-    <section id="data">
-        <div class="container">
-            <div class="project-section-information">
-                <h1 class="section-title">My Projects</h1>
-                <p>In this section, you will find an overview of my key projects. Each entry represents a different project, and clicking on one will open a new tab with its GitHub repository. The repository's README file provides a detailed description of the project, including its purpose, features, and the technologies used.</p>
-            </div>
-
-        <!-- -------------descriptions and files------------- -->
-            <div class="project-information">
-                <div class="main-div" onclick="window.open('https://github.com/Splafty/Personal_Website', '_blank')">
-                    <h2>My Personal Website</h2>
-                    <p>Personal website built with HTML, CSS, and JavaScript, introducing who I am and showcasing my projects, and contact information.</p>
-                    <div class="project-technologies">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JS</li>
-                            <li>RWD</li>
-                            <li>GitHub Pages</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="main-div" onclick="window.open('https://github.com/Splafty/CeneoWebScraperPH', '_blank')">
-                    <h2>Ceneo Web Scraper</h2>
-                    <p>A Flask-powered web scraper built with Python, designed to fetch product reviews from Ceneo.pl, automatically analyze them, and present them in the form of easy-to-read statistics.</p>
-                    <div class="project-technologies">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JS</li>
-                            <li>RWD</li>
-                            <li>Bootsrap</li>
-                            <li>Chart.js</li>
-                            <li>Python</li>
-                            <li>Flask</li>
-                            <li>Jinja2</li>
-                            <li>BeautifulSoup4</li>
-                            <li>Requests</li>
-                            <li>Pandas</li>
-                            <li>Numpy</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="main-div" onclick="window.open('https://github.com/Splafty/EDI', '_blank')">
-                    <h2>Electronic Data Interchange</h2>
-                    <p>Dynamic web app built with HTML, CSS, and JavaScript, retrieving and visualizing data from a custom API generated using Mockaroo.</p>
-                    <div class="project-technologies">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JS</li>
-                            <li>RWD</li>
-                            <li>Fetch API</li>
-                            <li>Chart.js</li>
-                            <li>Mockaroo</li>
-                            <li>GitHub Pages</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- -------------internet and footer------------- -->
-    <section id="internet">
-        <div class="container">
-            <div class="row">
-                <!-- mini navbar -->
-                <div class="internet-col-1 internet-column">
-                    <h2>Navigation</h2>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#data">Data</a></li>
-                        <li><a href="#internet">Internet</a></li>
-                    </ul>
-                </div>
-
-                <!-- internet -->
-                <div class="internet-col-2 internet-column">
-                    <h2>Internet</h2>
-                    <!-- search -->
-                    <form action="http://bing.com" target="_blank">
-        
-                        <label for="fname" class="search-text">What are you looking for:</label><br>
-                    
-                        <input type="text" id="q" name="q" placeholder="Search the web" class="search-block"><br>
-                    
-                        <input type="submit" value="Search" class="search-button">
-                    
-                    </form>
-                </div>
-
-                <!-- contact -->
-                <div class="internet-col-3 internet-column">
-                    <h2>Contact</h2>
-                    <p>Piotr Henzolt<br>piotr.henzolt@gmail.com</p>
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright &copy; <span class="current-date"></span> | Piotr Henzolt</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- -------------scrollreveal------------- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- -------------data table------------- -->
-    <script src="./script.js"></script>
-    <!-- -------------fontawesome------------- -->
-    <script src="https://kit.fontawesome.com/2d8fe6a7d0.js" crossorigin="anonymous"></script>
+  <!-- -------------javascript------------- -->
+  <script src="./script.js"></script>
+  <!-- -------------fontawesome------------- -->
+  <script src="https://kit.fontawesome.com/2d8fe6a7d0.js" crossorigin="anonymous"></script>
 
 </body>
 

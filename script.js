@@ -1,19 +1,4 @@
-// ScrollReveal - cool text reveal on entering the website
-const sr = ScrollReveal ({
-    distance: "50px",
-    reset: true
-})
-
-sr.reveal(".home-text", {delay: 100, duration: 2000, reset: false, origin: "top"});
-sr.reveal(".navigation-menu", {delay: 300, duration: 2000, reset: false, origin: "right"});
-sr.reveal(".about-col-1", {delay: -200, duration: 2000, origin: "left"});
-sr.reveal(".about-col-2", {delay: -200, duration: 2000, origin: "right"});
-sr.reveal("#technologies", {delay: -200, duration: 2000, origin: "left"});
-sr.reveal(".project-section-information", {delay: -200, duration: 2000, origin: "left"});
-sr.reveal(".project-information", {delay: 100, duration: 2000, origin: "bottom"}); 
-
 // Switching between tabs
-
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -32,30 +17,7 @@ function opentab(event, tabname)
     document.getElementById(tabname).classList.add("active-tab", "show");
 }
 
-function openFile(dataFile) 
-{
-    window.open(dataFile);
-}
-
-function openFileCSV(dataFile) 
-{
-    const newWindow = window.open()
-    
-    fetch(dataFile)
-    .then(response => response.text())
-    .then(content => 
-    {
-        newWindow.document.write('<pre>' + content + '</pre>');
-        newWindow.document.title = dataFile;
-        newWindow.document.body.style.backgroundColor = "black";
-        newWindow.document.body.style.color = "white";
-        newWindow.document.body.style.fontSize = 16;
-    })
-    .catch(error => console.error('Error fetching CSV file:', error));
-}
-
 // Hamburger menu
-
 function toggleMenu()
 {
     const menu = document.getElementById("sideMenu");
@@ -70,15 +32,54 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Get current date
+// Dates
 document.addEventListener("DOMContentLoaded", function()
 {
+    // Get current date for copyright
     const year = new Date().getFullYear();
-    document.querySelectorAll('.current-date')
+    document.querySelectorAll('#current-date')
     .forEach(el =>
     {
         el.textContent = year;
     });
+
+    // Get years worked as freelancer 
+    const startDate = new Date(2018,6);
+    const currentDate = new Date();
+
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+
+    if (months < 0)
+    {
+        years--;
+        months+=12;
+    }
+
+    if (months == 0)
+    {
+        timeWorked = `${years} years`;
+    }
+    else if (years == 0)
+    {
+        timeWorked = `${months} months`;
+    }
+    else
+    {
+        timeWorked = `${years} years ${months} months`;
+    }
+
+    document.querySelectorAll('#time-worked-freelance')
+    .forEach(el =>
+    {
+        el.textContent = timeWorked;
+    });
+
+    // Saved Theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        document.body.classList.add("light");
+    }
 });
 
 // Dark mode / Light mode switch
@@ -87,9 +88,17 @@ function toggleMode() {
     localStorage.setItem("theme", isLight ? "light" : "dark");
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        document.body.classList.add("light");
-    }
-});
+// ScrollReveal - cool text reveal on entering the website
+const sr = ScrollReveal ({
+    distance: "50px",
+    reset: true,
+    viewFactor: 0.15
+})
+
+sr.reveal(".home-text", {delay: 50, duration: 1750, reset: false, origin: "top",});
+sr.reveal(".navigation-menu", {delay: 150, duration: 1750, reset: false, origin: "right"});
+sr.reveal(".about-col-1", {delay: -200, duration: 2000, origin: "left"});
+sr.reveal(".about-col-2", {delay: -200, duration: 2000, origin: "right"});
+sr.reveal(".technologies", {delay: -200, duration: 2000, origin: "left"});
+sr.reveal(".project-section-information", {delay: -200, duration: 2000, origin: "left"});
+sr.reveal(".project-information", {delay: 100, duration: 2000, origin: "bottom"});
