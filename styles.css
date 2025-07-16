@@ -120,7 +120,7 @@ body
 .menu-icon
 {
     display: none;
-    font-size: 30px;
+    font-size: 1.875rem;
     cursor: pointer;
     color: var(--text);
     z-index: 101;
@@ -130,7 +130,7 @@ body
 
 .menu-x
 {
-    font-size: 30px;
+    font-size: 1.875rem;
     cursor: pointer;
     color: var(--text);
     z-index: 101;
@@ -236,7 +236,7 @@ nav ul li a
 {
     color: var(--text);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     position: relative;
 }
 
@@ -711,7 +711,7 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
 {
     color: var(--text);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     transition: 0.4s;
 }
 
