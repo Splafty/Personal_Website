@@ -75,6 +75,18 @@ body.light .light-mode-icon
     align-items: center;
 }
 
+.hamburger-mode-button
+{
+    height: 40px;
+    width: 40px;
+    background-color: var(--text);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+}
 
 *
 {
@@ -164,7 +176,7 @@ body
 
 .nav-links
 {
-    margin-top: 50px;
+    margin-top: 60px;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -176,6 +188,12 @@ body
 {
     margin-top: 50px;
     text-align: center;
+}
+
+.social-media-links p
+{
+    font-size: 1.125rem;
+    margin: 8px;
 }
 
 .social-media-links i
