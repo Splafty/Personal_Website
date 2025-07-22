@@ -1,6 +1,6 @@
 # My Personal Website
 
-**Personal website built with HTML, CSS, and JavaScript**, introducing who I am and showcasing my projects, and contact information.
+**Personal website built using HTML, CSS, and JavaScript** that introduces who I am and showcases my education, work experience, projects, achievements, hobbies, and contact information.
 
 ---
 
