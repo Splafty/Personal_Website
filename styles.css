@@ -315,6 +315,7 @@ nav ul li a:hover::after
     color: var(--text-muted);
 }
 
+#toggle-repos-btn,
 .home-text .home-button
 {
     text-decoration: none;
@@ -329,6 +330,7 @@ nav ul li a:hover::after
     transition: 0.4s;
 }
 
+#toggle-repos-btn:hover,
 .home-button:hover
 {
     color: var(--primary-dark);
@@ -619,14 +621,17 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
     padding: 10px 0;
 }
 
+#github-repos,
 .project-information
 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     grid-gap: clamp(30px, 5vw, 40px);
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
+.main-repo-card,
 .project-information .main-div
 {
     border-radius: 10px;
@@ -636,6 +641,13 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
     transition: 0.4s;
 }
 
+.main-repo-card h4
+{
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-bottom: 15px;   
+}
+
 .project-information .main-div h2
 {
     font-size: 2rem;
@@ -643,17 +655,20 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
     margin-bottom: 15px;
 }
 
+.main-repo-card p,
 .project-information .main-div p
 {
     color: var(--text-muted);
     transition: 0.4s;
 }
 
+.main-repo-card:hover p,
 .project-information .main-div:hover p
 {
     color: var(--text);
 }
 
+.main-repo-card:hover,
 .project-information .main-div:hover
 {
     background: var(--primary-dark);
@@ -661,6 +676,7 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
     cursor: pointer;
 }
 
+.main-repo-card .project-technologies,
 .project-information .main-div .project-technologies
 {
     margin-top: 10px;
@@ -683,16 +699,48 @@ body.light .jira-bg        { background-color: rgba(0, 82, 204, 0.5); }
     transition: 0.4s;
 }
 
+#github-repos .main-repo-card:hover .project-technologies li,
 .project-information .main-div:hover li
 {
     background: var(--primary-very-dark);
 }
 
+.repo-button-container
+{
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* animations for repo cards */
+.github-repos-preview {
+  max-height: 900px; /* +- wysokość na 4 repo */
+  overflow: hidden;
+  transition: max-height 0.8s ease,
+}
+
+.github-repos-expanded {
+  max-height: 5400px;
+  overflow: hidden;
+  transition: max-height 1s ease,
+}
+
+.main-repo-card {
+  opacity: 0.1;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
 /* <!-- -------------contact------------- --> */
 #contact
 {
+    margin-top: 20px;
     padding-top: 40px;
-    margin-top: 60px;
     width: 100%;
     background: var(--bg-light);
 }

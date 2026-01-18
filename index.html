@@ -190,132 +190,14 @@
         I'm currently using a range of modern technologies that enable me to build highly functional solutions.
         These are some of my main ones.
         </p>
-        <div class="technologies-grid-container">
-          <div class="tech-card">
-            <div class="icon-wrapper wordpress-bg">
-              <img alt="WordPress" src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg">
-            </div>
-            <div>
-              <h4>WordPress</h4>
-              <p><span>CMS Platform</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper html-bg">
-              <img alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-            </div>
-            <div>
-              <h4>HTML</h4>
-              <p><span>Markup Language</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper css-bg">
-              <img alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-            </div>
-            <div>
-              <h4>CSS</h4>
-              <p><span>Style Sheet Language</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper js-bg">
-              <img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-            </div>
-            <div>
-              <h4>JavaScript</h4>
-              <p><span>Programming Language</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper rwd-bg">
-              <img alt="RWD" src="https://www.svgrepo.com/show/261938/responsive.svg">
-            </div>
-            <div>
-              <h4>RWD</h4>
-              <p><span>Responsive Web Design</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper figma-bg">
-              <img alt="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
-            </div>
-            <div>
-              <h4>Figma</h4>
-              <p><span>Design Tool</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper photoshop-bg">
-              <img alt="Photoshop" src="https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg">
-            </div>
-            <div>
-              <h4>Photoshop</h4>
-              <p><span>Image Editing</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper git-bg">
-              <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-            </div>
-            <div>
-              <h4>Git</h4>
-              <p><span>Version Control</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper github-bg">
-              <img alt="GitHub" src="https://cdn.simpleicons.org/github/ffffff">
-            </div>
-            <div>
-              <h4>GitHub</h4>
-              <p><span>Code Hosting</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper python-bg">
-              <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-            </div>
-            <div>
-              <h4>Python</h4>
-              <p><span>Programming Language</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper mysql-bg">
-              <img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
-            </div>
-            <div>
-              <h4>MySQL</h4>
-              <p><span>Relational Database</span></p>
-            </div>
-          </div>
-
-          <div class="tech-card">
-            <div class="icon-wrapper jira-bg">
-              <img alt="Jira" src="https://cdn.simpleicons.org/jira/0052CC">
-            </div>
-            <div>
-              <h4>Jira</h4>
-              <p><span>Project Management</span></p>
-            </div>
-          </div>
-        </div>
+        <div id="technologies-grid" class="technologies-grid-container">
+          <!-- Technologies will be generated using JS -->
+        </div> 
       </div>
     </div>
   </section>
 
-  <!-- -------------table and data------------- -->
+  <!-- -------------projects and repos------------- -->
   <section id="projects">
     <div class="container">
       <div class="project-section-information">
@@ -323,7 +205,7 @@
         <p>In this section, you will find an overview of my key projects. Each entry represents a different project, and clicking on one will open a new tab with its GitHub repository. The repository's README file provides a detailed description of the project, including its purpose, features, and the technologies used.</p>
       </div>
 
-    <!-- -------------descriptions and files------------- -->
+      <!-- -------------project descriptions and links------------- -->
       <div class="project-information">
         <div class="main-div" onclick="window.open('https://github.com/Splafty/Personal_Website', '_blank')">
           <h2>My Personal Website</h2>
@@ -390,6 +272,22 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- -------------github repos------------- -->
+    <div id="github-repos-container" class="container">
+      <div class="project-section-information">
+        <h1 class="section-title">My GitHub Repositories</h1>
+        <p>Below is a list of my GitHub repositories, showcasing various projects and contributions. You can see the repo titles, descriptions, and the technologies used. You can also see the number of stars and modified date.</p>
+      </div>
+
+      <!-- -------------repos descriptions and links------------- -->
+      <div id="github-repos" class="github-repos-preview">
+        <!-- GitHub repos will be generated using JS from GitHub API-->
+      </div>
+      <div class="repo-button-container">
+        <button id="toggle-repos-btn">See more</button>
       </div>
     </div>
   </section>
