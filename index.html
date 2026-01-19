@@ -83,24 +83,16 @@
           <p>My name is Piotr Henzolt. I aspire to become a web developer with a focus on creating innovative and user-friendly web applications. My goal is to master various web technologies, stay updated on industry trends, and contribute to projects that make a positive impact. I've enjoyed building things since i was little and coding/designing is just like building - that's why I like it!</p>
           
           <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab(event, 'Education')">Education</p>
-            <p class="tab-links" onclick="opentab(event, 'Work')">Work</p>
+            <p class="tab-links active-link" onclick="opentab(event, 'Work')">Work</p>
+            <p class="tab-links" onclick="opentab(event, 'Internship')">Internship</p>
+            <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
             <p class="tab-links" onclick="opentab(event, 'Achievements')">Achievements</p>
             <p class="tab-links" onclick="opentab(event, 'Hobbies')">Hobbies</p>
           </div>
 
           <!-- Tab contents -->
-          <div class="tab-contents active-tab show" id="Education">
-            <ul>
-              <li><span class="name">University</span><br>Cracow University of Economics</li>
-              <li><span class="name">Field of study</span><br>Applied Informatics</li>
-              <li><span class="name">Why this field</span><br>I've always been passionate about technology and programming. Studying IT allows me to explore my interests in depth. I've always been good with computers, and everyone came to me if they had a tech-related problem. For me, out of all the fields, Applied Informatics was the obvious choice.</li>
-              <li><span class="name">Expectations</span><br>I hope to gain a solid understanding of web development, programming principles, develop practical skills, and contribute to innovative projects. I also want to level up my teamwork as well as my communication. I expect to get a well-paid job that I will enjoy after completing this course.</li>
-            </ul>
-            <a href="https://splafty.github.io/Personal_Website/files/CV_Piotr_Henzolt.pdf" download class="download-button">Download CV</a>
-          </div>
-
-          <div class="tab-contents" id="Work">
+          <!-- Work -->
+          <div class="tab-contents active-tab show" id="Work">
             <ul>
               <li class="work-entry">
                 <div class="work-date">07.2018 - Present <span class="date">(<span id="time-worked-freelance"></span>)</span></div>
@@ -142,15 +134,61 @@
                     <li class="wrok-technology">WordPress</li>
                     <li class="wrok-technology">HTML</li>
                     <li class="wrok-technology">CSS</li>
-                    <li class="wrok-technology">JS</li>
                     <li class="wrok-technology">RWD</li>
                     <li class="wrok-technology">Photoshop</li>
+                    <li class="wrok-technology">and more...</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Internship -->
+          <div class="tab-contents" id="Internship">
+            <ul>
+              <li class="work-entry">
+                <div class="work-date">19.08.2025 - 20.11.2025 <span class="date">(3 months)</span></div>
+                <div class="work-information">
+                  <span class="name">WordPress Developer</span>
+                  <span class="date">| PTM Soft | Kraków</span>
+                </div>
+                <ul class="responsibilities">
+                  <li>● Designing graphical mockups and sample website layouts based on project requirements</li>
+                  <li>● Implementing websites and subpages in WordPress using external plugins and predefined layouts</li>
+                  <li>● Configuring and customizing WordPress themes and plugins to meet functional requirements</li>
+                  <li>● Testing website functionality, usability, and cross-browser compatibility</li>
+                  <li>● Adjusting and optimizing websites according to client feedback and business requirements</li>
+                  <li>● Implementing basic SEO practices, including metadata configuration, content structure, and performance optimization</li>
+                  <li>● Applying WCAG accessibility guidelines, including semantic structure, contrast, and usability improvements</li>
+                  <li>● Managing media assets, including image optimization and content preparation for web use</li>
+                <div class="project-technologies">
+                  <ul>
+                    <li class="wrok-technology">WordPress</li>
+                    <li class="wrok-technology">HTML</li>
+                    <li class="wrok-technology">CSS</li>
+                    <li class="wrok-technology">RWD</li>
+                    <li class="wrok-technology">SEO</li>
+                    <li class="wrok-technology">WCAG</li>
+                    <li class="wrok-technology">Photoshop</li>
+                    <li class="wrok-technology">and more...</li>
                   </ul>
                 </div>
               </li>
             </ul>
           </div>
 
+          <!-- Education -->
+          <div class="tab-contents " id="Education">
+            <ul>
+              <li><span class="name">University</span><br>Cracow University of Economics</li>
+              <li><span class="name">Field of study</span><br>Applied Informatics</li>
+              <li><span class="name">Why this field</span><br>I've always been passionate about technology and programming. Studying IT allows me to explore my interests in depth. I've always been good with computers, and everyone came to me if they had a tech-related problem. For me, out of all the fields, Applied Informatics was the obvious choice.</li>
+              <li><span class="name">Expectations</span><br>I hope to gain a solid understanding of web development, programming principles, develop practical skills, and contribute to innovative projects. I also want to level up my teamwork as well as my communication. I expect to get a well-paid job that I will enjoy after completing this course.</li>
+            </ul>
+            <a href="https://splafty.github.io/Personal_Website/files/CV_Piotr_Henzolt.pdf" download class="download-button">Download CV</a>
+          </div>
+
+          <!-- Achievements -->
           <div class="tab-contents" id="Achievements">
             <ul>
               <li><span class="name">School</span></li>
@@ -166,6 +204,7 @@
             </ul>
           </div>
 
+          <!-- Hobbies -->
           <div class="tab-contents" id="Hobbies">
             <ul>
               <li><span class="name">Designing/Coding</span><br>I always liked building, and designing/coding is just like building! You can create whatever you can imagine.</li>

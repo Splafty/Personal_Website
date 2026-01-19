@@ -66,7 +66,7 @@ sr.reveal(".home-text", {delay: 50, duration: 1750, reset: false, origin: "top",
 sr.reveal(".navigation-menu", {delay: 150, duration: 1750, reset: false, origin: "right"});
 sr.reveal(".about-col-1", {delay: -200, duration: 2000, origin: "left"});
 sr.reveal(".about-col-2", {delay: -200, duration: 2000, origin: "right"});
-sr.reveal(".technologies", {delay: -200, duration: 2000, origin: "left"});
+sr.reveal(".technologies", {delay: -200, duration: 2000, origin: "left"}); 
 sr.reveal(".project-section-information", {delay: -200, duration: 2000, origin: "left"});
 sr.reveal(".project-information", {delay: -100, duration: 2000, origin: "bottom"});
 sr.reveal(".github-repos-preview", {delay: -100, duration: 2000, origin: "bottom"});
